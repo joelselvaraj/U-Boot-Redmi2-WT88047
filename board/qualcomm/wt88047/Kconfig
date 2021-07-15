@@ -1,0 +1,15 @@
+if TARGET_WT88047
+
+config SYS_BOARD
+	default "wt88047"
+
+config SYS_VENDOR
+	default "qualcomm"
+
+config SYS_SOC
+	default "apq8016"
+
+config SYS_CONFIG_NAME
+	default "wt88047"
+
+endif

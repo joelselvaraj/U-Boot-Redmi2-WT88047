@@ -1,0 +1,55 @@
+// SPDX-License-Identifier: GPL-2.0+
+/*
+ * U-Boot addition to handle Wingtech MSM8916 pins
+ *
+ * (C) Copyright 2021 Joel Selvaraj <jo@jsfamily.in>
+ */
+
+/ {
+
+	smem {
+		u-boot,dm-pre-reloc;
+	};
+
+	soc {
+		u-boot,dm-pre-reloc;
+
+		qcom,tlmm@1000000 {
+			u-boot,dm-pre-reloc;
+
+			uart {
+				u-boot,dm-pre-reloc;
+			};
+		};
+
+		qcom,gcc@1800000 {
+			u-boot,dm-pre-reloc;
+		};
+
+		serial@78b0000 {
+			u-boot,dm-pre-reloc;
+		};
+	};
+};
+
+
+&pm8916_gpios {
+	usb_hub_reset_pm {
+		gpios = <&pm8916_gpios 2 0>;
+	};
+
+	usb_sw_sel_pm {
+		gpios = <&pm8916_gpios 3 0>;
+	};
+};
+
+
+&pm8916_pon {
+	key_vol_down {
+		gpios = <&pm8916_pon 1 0>;
+	};
+
+	key_power {
+		gpios = <&pm8916_pon 0 0>;
+	};
+};

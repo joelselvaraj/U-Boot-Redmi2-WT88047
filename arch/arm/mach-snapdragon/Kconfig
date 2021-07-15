@@ -35,9 +35,16 @@ config TARGET_DRAGONBOARD820C
 	  - 3GiB RAM
 	  - 32GiB UFS drive
 
+config TARGET_WT88047
+	bool "Wingtech WT88047"
+	select BOARD_LATE_INIT
+	help
+	  Support for Wingtech WT88047 mobile phone
+
 endchoice
 
 source "board/qualcomm/dragonboard410c/Kconfig"
 source "board/qualcomm/dragonboard820c/Kconfig"
+source "board/qualcomm/wt88047/Kconfig"
 
 endif

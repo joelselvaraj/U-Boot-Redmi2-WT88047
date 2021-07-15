@@ -1,0 +1,6 @@
+WT88047 BOARD
+M:	Joel Selvaraj <jo@jsfamily.in>
+S:	Maintained
+F:	board/qualcomm/wt88047/
+F:	include/configs/wt88047.h
+F:	configs/wt88047_defconfig
